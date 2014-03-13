@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout3" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#404040"
+            android:textSize="15sp"
+            android:text="我们已经发送了" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+             android:textSize="15sp"
+            android:textColor="@color/font_color" />
+
+        <TextView
+            android:textColor="#404040"
+             android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到你的手机" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="#404040"
+        android:text="1111111111" />
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="请输入验证码"
+        android:paddingLeft="10dp"
+        android:background="@drawable/edit_input_bg"
+        android:ems="10" >
+        <requestFocus />
+    </EditText>
+
+    <RelativeLayout  android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:layout_centerInParent="true"
+        android:background="@drawable/code_sure"
+        android:text="确认" />
+    </RelativeLayout>
+    
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="接收短信大约28秒" />
+
+</LinearLayout>

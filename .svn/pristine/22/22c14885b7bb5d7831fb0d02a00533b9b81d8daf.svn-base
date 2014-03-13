@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+    
+        <LinearLayout
+            android:id="@+id/layout_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_input_bg"
+            android:gravity="center_vertical|left" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="充值账号"
+                android:textColor="#85000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/font_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_input_bg"
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额"
+                android:textColor="#85000000"
+                android:paddingLeft="10dp"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_account_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="0.00 九币"
+                android:textColor="@color/font_color" />
+        </LinearLayout>
+
+</LinearLayout>

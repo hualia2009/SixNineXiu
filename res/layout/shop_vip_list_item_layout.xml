@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:text="1个月" />
+        <TextView
+            android:id="@+id/tv_vip_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/tv_month"
+			android:layout_marginLeft="40dp"
+			android:textColor="#85000000"
+			android:textSize="15sp"
+			android:gravity="center_vertical"
+	        android:text="50000九币" />
+        
+        <TextView
+            android:id="@+id/tv_buy"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:clickable="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shop_vip_buy"
+            android:text="购买" />
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_buy"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/font_color"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:textStyle="italic"
+            android:text="9折" />
+    </RelativeLayout>
+</LinearLayout>

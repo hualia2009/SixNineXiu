@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <ImageView
+            android:id="@+id/sixnine_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sixninexiu_logo"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/et_input_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/newlog_text"
+            android:gravity="center"
+            android:layout_gravity="center"
+             >
+        </ImageView>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/qq_login"
+        android:layout_below="@id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:orientation="horizontal"
+        android:background="@drawable/qq_login_bg"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp" >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sina_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qq_login"
+        android:background="@drawable/sina_login_bg"
+        android:layout_centerInParent="true"
+        android:onClick="onClick"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/baidu_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sina_login"
+        android:background="@drawable/baidu_login_bg"
+        android:layout_centerInParent="true"
+        android:onClick="onClick"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/other_register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baidu_login"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他登录注册/方式"/>
+        <ImageView 
+            android:id="@+id/other_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="true"
+            android:src="@drawable/other_oneimage"/>
+        </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/newlogin_login_regis"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/other_register"
+	    android:layout_marginTop="25dp"
+	    android:gravity="center"
+	    android:visibility="gone"
+	    >
+        <Button
+        android:id="@+id/bt_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_logina"
+        android:onClick="onClick"
+        android:text="注册"
+        android:textColor="#fff"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_logina"
+        android:onClick="onClick"
+        android:text="登录"
+        android:layout_marginLeft="20dp"
+        android:textColor="#fff"
+        android:textSize="15sp" />
+	</LinearLayout>
+
+</RelativeLayout>

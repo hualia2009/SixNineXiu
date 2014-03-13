@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ninexiu.sixninexiu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_splash"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </android.support.v4.view.ViewPager>
+
+    <com.ninexiu.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/pager_indicator2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="20dp"
+        app:fillColor="@color/font_color"
+        app:radius="5dp" />
+
+    <ImageView
+        android:id="@+id/iv_splash"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:background="@drawable/start_anima" />
+
+</FrameLayout>

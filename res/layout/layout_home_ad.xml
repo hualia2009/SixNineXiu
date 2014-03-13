@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/advertising"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.ninexiu.customerview.GalleryView
+        android:id="@+id/ad_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="125dp"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="0.0sp"
+        android:scrollbars="none"
+        android:spacing="0dp" />
+
+</FrameLayout>

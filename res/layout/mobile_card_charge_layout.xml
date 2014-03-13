@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#fff" >
+
+    <include layout="@layout/title_layout3" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/charge_public_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="请选择充值卡类型及余额(1元=1000九币)"
+        android:textColor="#85000000"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_china_mobile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        android:background="@drawable/namecard_item_bkg_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="中国移动充值卡" />
+
+        <ImageView
+            android:id="@+id/iv_mobile_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mobile_card_selected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+         android:id="@+id/layout_china_union"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"
+        android:background="@drawable/namecard_item_bkg_middle" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="中国联通充值卡" />
+
+        <ImageView
+              android:id="@+id/iv_union_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:src="@drawable/mobile_card_selected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+         android:id="@+id/layout_china_dianxin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClick"
+        android:background="@drawable/namecard_item_bkg_bottom" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="中国电信充值卡" />
+
+        <ImageView
+            android:id="@+id/iv_dianxin_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:src="@drawable/mobile_card_selected" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/tv_thithy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:text="30元"
+            android:background="@drawable/mobile_card_num_selected"
+            android:textColor="#85000000" />
+
+        <TextView
+            android:id="@+id/tv_fifty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+             android:clickable="true"
+            android:onClick="onClick"
+            android:text="50元"
+            android:background="@drawable/mobile_card_num_unselected"
+            android:textColor="#85000000" />
+
+        <TextView
+            android:id="@+id/tv_hundred"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/mobile_card_num_unselected"
+            android:text="100元"
+             android:clickable="true"
+            android:onClick="onClick"
+            android:textColor="#85000000" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_mobile_card_charge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="确认"
+        android:onClick="onClick"
+        android:textColor="#fff"
+        android:background="@drawable/mobile_charge_bt_sure"
+        android:textSize="15sp"
+        android:gravity="center"
+         />
+
+</LinearLayout>

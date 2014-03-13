@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/surfaceview_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="270dp"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:id="@+id/surfaceview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="onClick" >
+        </RelativeLayout>
+
+        <com.ninexiu.customerview.ScrollTextView
+            android:id="@+id/gift_marquee"
+            android:layout_width="fill_parent"
+            android:layout_height="29.0dip"
+            android:layout_gravity="top"
+            android:textSize="15sp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <!-- 面板部分 -->
+
+    <LinearLayout
+        android:id="@+id/room_tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="39.0dip"
+            android:background="#262626"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <!-- 公聊面板 -->
+
+            <RelativeLayout
+                android:id="@+id/room_tab_pub"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:id="@+id/room_tab_pub_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="公聊"
+                    android:textColor="#fff"
+                    android:textSize="15.0sp" />
+
+                <TextView
+                    android:id="@+id/room_tab_pub_sel_arr"
+                    android:layout_width="59dp"
+                    android:layout_height="6dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:background="#FF0084" />
+            </RelativeLayout>
+
+            <!-- 私聊面板 -->
+
+            <RelativeLayout
+                android:id="@+id/room_tab_private"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <TextView
+                        android:id="@+id/room_tab_private_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="私聊"
+                        android:textColor="#fff"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:id="@+id/room_tab_private_msg_dot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/room_tab_private_txt"
+                        android:layout_marginBottom="-5.0dip"
+                        android:layout_toRightOf="@id/room_tab_private_txt"
+                        android:src="@drawable/private_lignt"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/room_tab_private_sel_arr"
+                    android:layout_width="59dp"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:background="#FF0084"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- 观众面板 -->
+
+            <RelativeLayout
+                android:id="@+id/room_tab_viewer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:id="@+id/room_tab_viewer_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="观众"
+                    android:textColor="#fff"
+                    android:textSize="15.0sp" />
+
+                <TextView
+                    android:id="@+id/room_tab_viewer_sel_arr"
+                    android:layout_width="59dp"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="2dp"
+                    android:background="#FF0084"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- 元宝按钮 -->
+
+            <RelativeLayout
+                android:id="@+id/room_tab_yuanbao"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTabClick" >
+
+                <ImageView
+                    android:id="@+id/room_tab_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="onClick"
+                    android:src="@drawable/room_money" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/yuan_bao_count"
+                    android:gravity="center_horizontal"
+                    android:text="9"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <!-- 送礼按钮 -->
+
+            <ImageView
+                android:id="@+id/room_tab_gift"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1.0"
+                android:onClick="onClick"
+                android:src="@drawable/room_gift" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

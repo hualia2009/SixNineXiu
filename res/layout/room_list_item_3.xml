@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:clickable="false"
+    android:baselineAligned="true"
+    android:focusable="false" >
+
+    <LinearLayout
+        android:id="@+id/roomitem3_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/room_list_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/roomitem3_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            layout="@layout/room_list_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/roomitem3_3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            layout="@layout/room_list_item" />
+    </LinearLayout>
+
+</LinearLayout>

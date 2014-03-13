@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/home_anchor_bg" >
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@color/home_bg" >
+
+        <ImageView
+            android:id="@+id/left_bt"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:scaleType="center"
+            android:src="@drawable/home_anchor_left" />
+
+        <ImageView
+            android:id="@+id/right_bt"
+            android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            android:scaleType="center"
+            android:src="@drawable/home_anchor_right" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="直播大厅"
+            android:textColor="#404040"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_view"
+        android:layout_marginTop="2dip"
+        android:background="@color/home_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/anthor_duration"
+        android:paddingRight="@dimen/anthor_duration" >
+
+        <Button
+            android:id="@+id/pop_anchor"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/top_tab_button_left"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/popularity_anchor"
+            android:textColor="@color/home_top_tab" />
+
+        <Button
+            android:id="@+id/recommendation_anchor"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/top_tab_button_center"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/recommendation_anchor"
+            android:textColor="@color/home_top_tab" />
+
+        <Button
+            android:id="@+id/new_anchor"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/top_tab_button_right"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/new_anchor"
+            android:textColor="@color/home_top_tab" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/splite"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/linear_top_bar"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/home_splite" />
+
+    <com.ninexiu.pullrefreshview.PullToRefreshListView
+        android:id="@+id/lv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/splite"
+        android:layout_marginLeft="@dimen/anthor_duration"
+        android:layout_marginRight="@dimen/anthor_duration"
+        android:divider="@null"
+        android:paddingTop="3dip"
+        android:scrollbars="none" >
+    </com.ninexiu.pullrefreshview.PullToRefreshListView>
+
+    <LinearLayout
+        android:id="@+id/l_loadingview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/splite"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_loading" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l_retryview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/splite"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_net_error" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/task_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:onClick="onClick" >
+
+        <ImageView
+            android:id="@+id/task_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/task_count"
+            android:contentDescription="@null" />
+    </LinearLayout>
+
+</RelativeLayout>

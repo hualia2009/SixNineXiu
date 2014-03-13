@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/login_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dialog_login_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="7dip"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/dialog_login_left"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="登录|注册"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_login_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="7dip"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/dialog_log_rig"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="QQ账号登录"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

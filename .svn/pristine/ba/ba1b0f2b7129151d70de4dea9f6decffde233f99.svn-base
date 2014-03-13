@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp" >
+
+        <ImageView
+            android:id="@+id/iv_task_is_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/task_uncomplte" />
+
+        <LinearLayout
+            android:id="@+id/layout_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_task_is_complete" >
+
+            <TextView
+                android:id="@+id/tv_task_descrption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成功注册账号" />
+
+            <Button
+                android:id="@+id/bt_task_reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/task_unreward"
+                android:gravity="center"
+                android:text="领币"
+                android:layout_marginLeft="10dp"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_task_is_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/layout_task"
+            android:layout_below="@+id/layout_task"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="未完成"
+            android:textColor="#85000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_task_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:text="100九币"
+            android:textColor="@color/font_color" />
+
+        <ImageView
+            android:id="@+id/iv_task_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/task_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

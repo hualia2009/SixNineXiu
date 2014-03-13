@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:id="@+id/chat_edit_layout"
+    android:orientation="vertical" >
+
+    <!-- 操作栏 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#3c3c3c"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/plus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/menu_plus_btn"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:padding="6.0dip" />
+
+        <ImageView
+            android:id="@+id/emotion_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/kk_emo_btn"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:padding="6.0dip" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.0"
+            android:background="#00000000" >
+
+            <EditText
+                android:id="@+id/chat_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/all_input"
+                android:imeOptions="actionSend"
+                android:onClick="onClick"
+                android:paddingRight="40dp"
+                android:paddingLeft="4dp"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@+id/record_close"
+                android:layout_width="35dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/room_record" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="3.0dip"
+            android:background="@drawable/kk_send_btn"
+            android:onClick="onClick"
+            android:text="发送"
+            android:textColor="#ffffffff"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

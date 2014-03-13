@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ninexiu.sixninexiu"
+    android:id="@+id/room_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/audience_back" >
+
+    <!-- 视频部分 -->
+
+    <FrameLayout
+        android:id="@+id/surfaceview_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:id="@+id/surfaceview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:onClick="onClick" >
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" >
+
+            <com.ninexiu.customerview.ScrollTextView
+                android:id="@+id/gift_marquee"
+                android:layout_width="fill_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/run_road"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/tv_host_love"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/heart_bg2"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/red_heart" />
+
+                <TextView
+                    android:id="@+id/tv_host_receiver_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:gravity="center_vertical"
+                    android:text="获取爱心中.."
+                    android:textColor="#fff" >
+                </TextView>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/iv_video_load"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video_loading"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- <ImageView
+            android:id="@+id/iv_video_load"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/video_load_anim"
+            android:visibility="gone" /> -->
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp"
+            layout="@layout/video_recomand_layout" />
+
+        <!-- 返回按钮 -->
+        <!--
+    <Button
+        android:id="@+id/room_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/room_back_btn"
+        android:layout_gravity="top|left"
+        android:onClick="onClick"
+        android:visibility="gone" />
+        -->
+
+
+        <!-- 主播标签窗体 -->
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            layout="@layout/room_host_info"
+            android:visibility="gone" />
+        <!-- 返回布局 -->
+
+        <LinearLayout
+            android:id="@+id/room_back_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/room_back_head_bg"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/room_back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
+                    android:src="@drawable/room_back_btn" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/room_host_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="主播姓名"
+                android:textColor="#fff"
+                android:textSize="20.0sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical|right" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@drawable/room_right_image" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 面板部分 -->
+
+    <LinearLayout
+        android:id="@+id/room_tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/surfaceview_layout"
+        android:background="@drawable/room_chat_one_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 公聊面板 -->
+
+        <RelativeLayout
+            android:id="@+id/room_tab_pub"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:clickable="true"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/room_tab_pub_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="公聊"
+                android:textColor="#f35792"
+                android:textSize="15.0sp" />
+
+            <!--
+                 <ImageView
+                android:id="@+id/room_tab_pub_sel_arr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/room_chat_selected" />
+            -->
+        </RelativeLayout>
+
+        <!-- 私聊面板 -->
+
+        <RelativeLayout
+            android:id="@+id/room_tab_private"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:clickable="true"
+            android:onClick="onClick" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/room_tab_private_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="私聊"
+                    android:textColor="#8b8b8b"
+                    android:textSize="15.0sp" />
+
+                <ImageView
+                    android:id="@+id/room_tab_private_msg_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/room_tab_private_txt"
+                    android:layout_toRightOf="@id/room_tab_private_txt"
+                    android:src="@drawable/private_lignt"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <!--
+                 <ImageView
+                android:id="@+id/room_tab_private_sel_arr"
+                android:layout_width="12dp"
+                android:layout_height="6dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/room_chat_selected"
+                android:visibility="gone" />
+            -->
+        </RelativeLayout>
+
+        <!-- 观众面板 -->
+
+        <RelativeLayout
+            android:id="@+id/room_tab_viewer"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:clickable="true"
+            android:onClick="onClick" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/room_tab_viewer_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="观众"
+                    android:textColor="#8b8b8b"
+                    android:textSize="15.0sp" />
+                <!-- 观众数量 -->
+
+                <TextView
+                    android:id="@+id/room_tab_viewer_num_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="(1000)"
+                    android:textColor="#8b8b8b"
+                    android:textSize="15.0sp" />
+            </LinearLayout>
+
+            <!--
+                 <ImageView
+                android:id="@+id/room_tab_viewer_sel_arr"
+                android:layout_width="12dp"
+                android:layout_height="6dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/room_chat_selected"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"/>
+            -->
+        </RelativeLayout>
+        <!-- 粉丝 -->
+
+        <RelativeLayout
+            android:id="@+id/room_funny_rank"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:clickable="true"
+            android:onClick="onClick" >
+
+            <TextView
+                android:id="@+id/room_tab_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="粉丝"
+                android:textColor="#8b8b8b"
+                android:textSize="15.0sp" />
+
+            <!--
+                 <ImageView
+                android:id="@+id/room_tab_fan_sel_arr"
+                android:layout_width="12dp"
+                android:layout_height="6dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/room_chat_selected"
+                android:visibility="gone" />
+            -->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--
+    礼物 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/room_tab_layout"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@+id/gift_button"
+         >
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_weight="7.0" />
+
+        <ImageView
+            android:id="@+id/room_tab_gift"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:onClick="onClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/gift_click" />
+    </LinearLayout>
+    -->
+
+
+    <!--
+         <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/room_tab_layout"
+        android:background="#FF0087" />
+    -->
+
+    <LinearLayout
+        android:id="@+id/layout_fan"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/room_tab_layout"
+        android:background="@drawable/audience_back"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lv_room_fans"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/audience_back"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/audience_divider"
+            android:dividerHeight="1dp"
+            android:listSelector="#00000000" />
+
+        <LinearLayout
+            android:id="@+id/this_fans"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="5"
+            android:background="@drawable/room_fans_bottom_bg"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_this_fan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <ImageView
+                    android:id="@+id/room_fans_oneid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/room_fans_oneselected" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_month_fan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <ImageView
+                    android:id="@+id/room_fans_twoid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/room_fans_twoimage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_super_fan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <ImageView
+                    android:id="@+id/room_fans_threeid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/room_fans_threeimage" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_frame_two"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/room_tab_layout"
+        android:visibility="visible" >
+
+        <!-- 中间部分 -->
+
+        <ListView
+            android:id="@+id/chat_content_layout_public"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/audience_back"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:dividerHeight="5dp"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0.0px"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip"
+            android:transcriptMode="alwaysScroll" />
+        <!-- android:stackFromBottom="true" -->
+
+        <LinearLayout
+            android:id="@+id/layout_no_logo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_no_logo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.ninexiu.customerview.PullListView
+            android:id="@+id/room_user_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/audience_back"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/audience_divider"
+            android:dividerHeight="1dp"
+            android:footerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/room_user_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/room_fans_bottom_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/room_user_normal_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <ImageView
+                    android:id="@+id/room_user_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/room_user_user_select" />
+
+                <TextView
+                    android:id="@+id/room_user_normal_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="#ff4200" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/room_user_manager_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick" >
+
+                <ImageView
+                    android:id="@+id/room_user_manager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/room_user_manager" />
+
+                <TextView
+                    android:id="@+id/room_user_manager_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="#ff4200" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 底部点击表情和输入文字框 -->
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/room_chat_bar_layout" />
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/room_input_msg_layout"
+            android:clickable="true" />
+
+        <!-- 显示底部操作栏的 -->
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/live_bottom"
+            android:visibility="gone" />
+
+        <!-- 显示表情 -->
+
+        <LinearLayout
+            android:id="@+id/layout_emotion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#262626"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager_emotion"
+                android:layout_width="fill_parent"
+                android:layout_height="130dp"
+                android:padding="8.0dip" >
+            </android.support.v4.view.ViewPager>
+
+            <ImageView
+                android:id="@+id/iv_face_delete"
+                android:layout_width="30dp"
+                android:layout_height="18dp"
+                android:layout_gravity="bottom|right"
+                android:onClick="onClick"
+                android:src="@drawable/xml_del_key" />
+
+            <com.ninexiu.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/pager_indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:pageColor="#000"
+                app:radius="3dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

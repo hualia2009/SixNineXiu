@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ninexiu.sixninexiu"
+    android:layout_width="fill_parent"
+    android:layout_height="318dp"
+    android:background="#ff333435"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <HorizontalScrollView
+            android:id="@+id/giftscroller"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:background="@drawable/gift_cateogry_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_gift_hot"
+                    android:background="@drawable/gift_category"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="热门"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:gravity="center"
+                    android:text="趣味"
+                     android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_gift_funny"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="VIP"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_gift_vip"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:gravity="center"
+                    android:text="抢星"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_gift_star"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="豪华"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_gift_haohua"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:gravity="center"
+                    android:text="库存"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/tv_gift_kuncun"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <android.support.v4.view.ViewPager
+            android:background="#fff"
+            android:id="@+id/viewpager_scroller"
+            android:layout_width="fill_parent"
+            android:layout_height="180.0dip" />
+
+        <com.ninexiu.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/pager_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:fillColor="#fff"
+            android:background="#fff"
+            app:pageColor="#000" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fill_mon_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="36.0dip"
+        android:background="@drawable/gift_jiu_bg"
+        android:clickable="true"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip" >
+        <ImageView
+            android:id="@+id/gift_goldimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/gift_money_gold_img"
+            />
+
+        <TextView
+            android:id="@+id/cur_mon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/gift_goldimg"
+            android:layout_centerVertical="true"
+            android:text="九币:000"
+            android:textColor="#F35792" />
+        
+        <ImageView
+            android:id="@+id/gift_silverimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cur_mon"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/gift_money_silver"
+            />
+        <TextView
+            android:id="@+id/cur_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/gift_silverimg"
+            android:layout_centerVertical="true"
+            android:text="九点:000"
+            android:textColor="#F35792" />
+
+        <TextView
+            android:id="@+id/tv_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10.0dip"
+            android:layout_centerVertical="true"
+            android:text="充值 >"
+            android:textColor="#F35792" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gift_amount_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gift_amount_bg"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip" >
+
+        <TextView
+            android:id="@+id/gift_num_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="数量"
+            android:textColor="#ffffffff"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/gift_num_edit"
+            android:layout_width="100.0dip"
+            android:layout_height="25.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@id/gift_num_str"
+            android:background="@drawable/kk_chat_list_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#130c0e" />
+        <TextView
+            android:id="@+id/send_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/send_to_edit"
+            android:text="赠给"
+            android:textColor="#ffffffff"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/send_to_edit"
+            android:layout_width="100dp"
+            android:layout_height="25.0dip"
+            android:layout_alignTop="@+id/gift_num_edit"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/kk_chat_list_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:lines="1"
+            android:paddingLeft="4.0dip"
+            android:textColor="#130c0e" />
+    </RelativeLayout>
+
+</LinearLayout>

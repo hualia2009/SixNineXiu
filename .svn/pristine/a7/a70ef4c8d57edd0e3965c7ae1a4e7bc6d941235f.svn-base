@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <FrameLayout
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shak_head_bg" >
+
+            <ImageView
+                android:id="@+id/iv_host_head"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
+
+         
+            
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <!-- 主播名字 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_host_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YO YO"
+                    android:textColor="#4d4d4c"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_host_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/host_level_1" >
+                </ImageView>
+            </LinearLayout>
+
+            <!-- 主播性格标签 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_char_one"
+                    android:layout_width="50dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="#60deff"
+                    android:gravity="center"
+                    android:text="女王范"
+                    android:textColor="#fff"
+                    android:textSize="11sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_char_two"
+                    android:layout_width="50dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="#ff0095"
+                    android:gravity="center"
+                    android:text="女王范"
+                    android:textColor="#fff"
+                    android:textSize="11sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_char_three"
+                    android:layout_width="50dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="#ffcc00"
+                    android:gravity="center"
+                    android:text="女王范"
+                    android:textColor="#fff"
+                    android:textSize="11sp" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

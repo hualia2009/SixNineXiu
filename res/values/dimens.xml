@@ -1,0 +1,54 @@
+<!--
+  Copyright 2011 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+	<dimen name="right_menu_size">17sp</dimen>
+    <dimen name="slidingmenu_offset">95dp</dimen>
+    <dimen name="left_menu_offset">85dp</dimen>
+    <dimen name="behind_offset">80dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">10dp</dimen>
+    <dimen name = "sliding_right">300dp</dimen>
+    <dimen name = "drawable_right">25dp</dimen>
+
+    <integer name="num_cols">1</integer>
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="pop_host_infoheigth">43dp</dimen>
+    <dimen name="face_width_height">30dp</dimen>
+    <dimen name="chat_panle_face_width_height">20dp</dimen>
+    <dimen name="pop_chat_to_with">90dp</dimen>
+    <dimen name="hall_sub_menu_height">180dp</dimen>
+    <dimen name="pop_group_gift_width">150dp</dimen>
+    <dimen name="pop_group_gift_height">225dp</dimen>
+    <dimen name="pop_gift_height">350dp</dimen>
+    <dimen name="haohua_web_height">300dp</dimen>
+    <dimen name="nobel_pop_host_width">150dp</dimen>
+    <dimen name="nobel_pop_host_height">180dp</dimen>
+    <dimen name="soft_entry_icon_width">180dp</dimen>
+    <dimen name="soft_entry_icon_height">180dp</dimen>
+    <dimen name="anthor_duration">2dip</dimen>
+    <dimen name="rank_pop_width">120dp</dimen>
+    <dimen name="rank_pop_height">80dp</dimen>
+    <dimen name="page_top_height">40dp</dimen>
+    <dimen name="page_left_image_width">40dp</dimen>
+    <dimen name="page_top_text_size">18sp</dimen>
+
+</resources>

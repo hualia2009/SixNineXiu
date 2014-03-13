@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout3" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="任务描述"
+            android:textColor="#85000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="奖励"
+            android:textColor="#85000000"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <com.ninexiu.customerview.PullListView
+        android:id="@+id/lv_task"
+        android:layout_width="fill_parent"
+        android:fadingEdge="vertical"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:divider="@drawable/task_divider"
+        android:cacheColorHint="@android:color/transparent" >
+    </com.ninexiu.customerview.PullListView>
+
+</LinearLayout>

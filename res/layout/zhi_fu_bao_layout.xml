@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title_layout3" />
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/charge_public_layout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="请选择充值余额(1元等于1000九币)"
+            android:textColor="#85000000"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_charge_thiry"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/charge_num_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="30元"
+                android:textColor="#85000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_charge_fifty"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/charge_num_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="50元"
+                android:textColor="#85000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_charge_hundred"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/charge_num_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="100元"
+                android:textColor="#85000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_charge_thiry_hundred"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/charge_num_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="300元"
+                android:textColor="#85000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_charge_five_hundred"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/charge_num_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="500元"
+                android:textColor="#85000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_charge_thousand"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/charge_num_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="1000元"
+                android:textColor="#85000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/et_zhifu_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/zhifubao_input"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/zhifu_bao_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/zhifu_bao_bt"
+                android:onClick="onClick"
+                android:text="确认"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="小提示"
+            android:textColor="#faa9c2"
+            android:textSize="15sp" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
+                android:background="#f98bad" >
+            </View>
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="3dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-2dp"
+                android:background="#f98bad" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="3dp"
+                android:background="#f98bad" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="首次充值"
+                android:textColor="#5e5d5d"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="免费领取VIP会员豪华大礼包"
+                android:textColor="#f98bad"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="3dp"
+                android:background="#f98bad" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="人民币和九币兑换比例为"
+                android:textColor="#5e5d5d"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:1000"
+                android:textColor="#f98bad"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="3dp"
+                android:background="#f98bad" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="充值遇到问题  请联系官方客服  QQ:121585436"
+                android:textColor="#5e5d5d"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

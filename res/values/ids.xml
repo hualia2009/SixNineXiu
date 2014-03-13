@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="selected_view" type="id"/>
+     <item name="panelHandle" type="id"/>
+    <item name="panelContent" type="id"/>
+    <item name="icon" type="id"/>
+    <item name="name" type="id"/>
+    <item name="watching" type="id"/>
+    <item name="play" type="id"/>
+</resources>

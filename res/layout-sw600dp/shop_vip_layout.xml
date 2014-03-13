@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/shop_public_layout" />
+
+    <!-- 分割线 -->
+
+    <LinearLayout
+        android:id="@+id/vip_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <!--  <TextView
+            android:id="@+id/tv_vip_one"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/vip_selected"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="黄金VIP"
+            android:textColor="#fff" />
+
+        <TextView
+             android:id="@+id/tv_vip_two"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/vips_unselected"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="白金VIP"
+            android:textColor="#fff" />
+
+        <TextView
+             android:id="@+id/tv_vip_three"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:background="@drawable/vips_unselected"
+            android:gravity="center"
+            android:text="钻石VIP"
+            android:textColor="#fff" />-->
+    </LinearLayout>
+
+    <com.ninexiu.customerview.PullListView
+        android:id="@+id/lv_vip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/shop_divider"
+        android:layout_margin="10dp"
+        android:scrollbars="none" >
+    </com.ninexiu.customerview.PullListView>
+</LinearLayout>

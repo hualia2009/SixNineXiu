@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_bar_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="39dp"
+        android:background="#77787b"
+        android:gravity="center_vertical"
+        android:paddingBottom="1.0dip" >
+
+        <!-- 对谁聊天 -->
+
+        <TextView
+            android:id="@+id/chat_to"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/kk_chat_list_bg"
+            android:clickable="true"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="90.0dip"
+            android:onClick="onClick"
+            android:paddingLeft="4dp"
+            android:singleLine="true"
+            android:text="所有人"
+            android:textColor="#130c0e"
+            android:textSize="15.0sp" />
+
+        <!-- 悄悄话 -->
+
+        <RelativeLayout
+            android:id="@+id/private_checkbox_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5.0dip"
+            android:gravity="center"
+            android:onClick="onClick" >
+
+            <CheckBox
+                android:id="@+id/private_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:button="@drawable/check_siliao"
+                android:onClick="onClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@id/private_checkbox"
+                android:text="悄悄"
+                android:textColor="#ffffffff"
+                android:textSize="15.0sp" />
+
+        </RelativeLayout>
+
+        <!-- 彩条 -->
+
+        <RelativeLayout
+            android:id="@+id/color_bar_btn"
+            android:layout_width="77.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="3.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@drawable/kk_chat_bar_item_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick" >
+
+            <View
+                android:id="@+id/send_gift_icon"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/color_banner" />
+
+            <TextView
+                android:id="@+id/send_gift_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@id/send_gift_icon"
+                android:text="彩条 "
+                android:textColor="#ffffffff"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+        <!-- 元宝按钮 -->
+
+        <FrameLayout
+            android:id="@+id/room_tab_yuanbao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp" >
+
+            <ImageView
+                android:id="@+id/room_tab_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:onClick="onClick"
+                android:src="@drawable/room_money" />
+
+            <TextView
+                android:id="@+id/tv_yuanbao_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:text="0"
+                android:textColor="#ff4200" />
+        </FrameLayout>
+
+        <!-- 礼物 -->
+
+        <LinearLayout
+            android:id="@+id/room_tab_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gift_click" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="礼物"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="@color/white"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

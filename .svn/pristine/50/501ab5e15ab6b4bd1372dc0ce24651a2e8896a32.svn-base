@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_title_x"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/shake_title_red" >
+
+    <ImageView
+        android:id="@+id/left_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:background="@drawable/home_anchor_left"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/right_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/home_anchor_right"
+        android:onClick="onClick"
+        android:scaleType="centerInside"
+        android:textColor="#ffffffff" />
+
+    <LinearLayout
+        android:id="@+id/layout_live_sub_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/right_bt"
+        android:layout_toRightOf="@id/left_bt"
+        android:gravity="center"
+        android:onClick="onClick" >
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="直播大厅"
+            android:textColor="#404040"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

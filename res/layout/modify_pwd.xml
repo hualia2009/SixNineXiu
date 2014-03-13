@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_layout3" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/et_old_pwd"
+        android:inputType="textPassword"
+        android:background="@drawable/edit_input_bg"
+        android:hint="旧密码" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"
+        android:id="@+id/et_new_pwd"
+        android:background="@drawable/edit_input_bg"
+        android:hint="新密码" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="确认新密码"
+        android:inputType="textPassword"
+         android:id="@+id/et_new_pwd_twice"
+        android:paddingLeft="10dp"
+        android:background="@drawable/edit_input_bg" />
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/mobile_charge_bt_sure"
+        android:text="确认"
+        android:textSize="20sp"
+        android:onClick="onClick"
+        android:textColor="#fff" />
+
+</LinearLayout>

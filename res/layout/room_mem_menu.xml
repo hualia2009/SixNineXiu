@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120.0dip"
+    android:layout_height="152.0dip"
+    android:background="@drawable/kk_room_mem_menu_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/room_mem_name"
+        android:layout_width="120.0dip"
+        android:layout_height="32.0dip"
+        android:background="@drawable/kk_room_mem_memu_item_bg"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="8.0dip"
+        android:textColor="#ffff6bb0"
+        android:textSize="15.0sp" />
+
+    <View
+        android:layout_width="120.0dip"
+        android:layout_height="1.0dip"
+        android:background="#80dadada" />
+
+    <TextView
+        android:id="@+id/chat_btn"
+        android:layout_width="120.0dip"
+        android:layout_height="30.0dip"
+        android:background="@drawable/kk_room_mem_memu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:text="与他聊天"
+        android:textColor="#ff464646"
+        android:textSize="14.0sp" />
+
+    <View
+        android:layout_width="120.0dip"
+        android:layout_height="1.0dip"
+        android:background="#80dadada" />
+
+    <TextView
+        android:id="@+id/send_gift_btn"
+        android:layout_width="120.0dip"
+        android:layout_height="30.0dip"
+        android:background="@drawable/kk_room_mem_memu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:text="送他礼物"
+        android:textColor="#ff464646"
+        android:textSize="14.0sp" />
+
+    <View
+        android:layout_width="120.0dip"
+        android:layout_height="1.0dip"
+        android:background="#80dadada" />
+
+    <TextView
+        android:id="@+id/shut_up_btn"
+        android:layout_width="120.0dip"
+        android:layout_height="30.0dip"
+        android:background="@drawable/kk_room_mem_memu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:text="禁言"
+        android:textColor="#ff464646"
+        android:textSize="14.0sp" />
+
+    <View
+        android:layout_width="120.0dip"
+        android:layout_height="1.0dip"
+        android:background="#80dadada" />
+
+    <TextView
+        android:id="@+id/kick_btn"
+        android:layout_width="120.0dip"
+        android:layout_height="30.0dip"
+        android:background="@drawable/kk_room_mem_memu_item_bg"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10.0dip"
+        android:text="剔出30分钟"
+        android:textColor="#ff464646"
+        android:textSize="14.0sp" />
+
+</LinearLayout>

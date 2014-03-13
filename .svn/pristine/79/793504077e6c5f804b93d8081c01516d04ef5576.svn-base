@@ -1,0 +1,98 @@
+<resources>
+
+    <string name="app_name">69美女直播</string>
+    <string name="insert_card">请插入SD卡</string>
+    <string name="down_sucess">下载成功</string>
+    <string name="down_fail">下载失败</string>
+    <string name="is_downing">正在下载</string>
+
+    <string-array name="color_ban">
+        <item>冒个泡</item>
+        <item>真好听</item>
+        <item>加油</item>
+        <item>红心</item>
+        <item>太感动了</item>
+        <item>太强悍了</item>
+        <item>你真棒</item>
+        <item>啪啪啪</item>
+        <item>赞</item>
+    </string-array>
+
+    <!-- 组合礼物 -->
+    <string-array name="gift_group">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>V (50个)</item>
+        <item>笑脸 (99个)</item>
+        <item>心 (100个)</item>
+        <item>一箭穿心 (300个)</item>
+        <item>蝴蝶之心 (520个)</item>
+        <item>爱神之箭 (888个)</item>
+        <item>天鹅之恋 (999个)</item>
+        <item>比翼双飞 (1314个)</item>
+        <item>一生一世 (3344个)</item>
+        <item>生生世世 (9999个)</item>
+        <item>星空爱恋 (10000个)</item>
+    </string-array>
+
+    <!-- 组合礼物的数目 -->
+    <integer-array name="gift_group_count">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>99</item>
+        <item>100</item>
+        <item>300</item>
+        <item>520</item>
+        <item>888</item>
+        <item>999</item>
+        <item>1314</item>
+        <item>3344</item>
+        <item>9999</item>
+        <item>10000</item>
+    </integer-array>
+
+    <string name="gl_wait">请稍等</string>
+    <string name="gl_choose_title">请选择图片</string>
+    <string name="choice_host">选择主播</string>
+
+    <string-array name="sex_select">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string name="remote_call_failed">Failure calling remote service</string>
+    <string name="partnerHint">"partner"</string>
+    <string name="sellerHint">"seller"</string>
+    <string name="out_trade_noHint">"out_trade_no"</string>
+    <string name="subjectHint">"subject"</string>
+    <string name="bodyHint">"body"</string>
+    <string name="total_feeHint">"total_fee"</string>
+    <string name="notify_urlHint">"notify_url"</string>
+    <string name="charsetHint">"charset"</string>
+    <string name="signTypeHint">"signType"</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="Ensure">"确定"</string>
+    <string name="Cancel">"取消"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+    <string name="video_loading">视频正在加载中...</string>
+    <string name="popularity_anchor">人气主播</string>
+    <string name="recommendation_anchor">新秀推荐</string>
+    <string name="new_anchor">最新开播</string>
+    <string name="watching">%s人观看</string>
+    <string name="charge">充值</string>
+    <string name="setting">设置</string>
+    <string name="attention_anchor">我关注的主播</string>
+    <string name="looked_anchor">我看过的主播</string>
+    <string name="shark_it_off">摇一摇</string>
+    <string name="public_chat">公聊</string>
+    <string name="private_chat">私聊</string>
+    <string name="audience">观众</string>
+    <string name="fans">粉丝</string>
+
+</resources>

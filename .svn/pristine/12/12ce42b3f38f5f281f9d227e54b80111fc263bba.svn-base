@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_user_info"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/right_menu_hold_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dip"
+        android:paddingTop="15dip" >
+
+        <ImageView
+            android:layout_width="180dip"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_menu_top" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/right_default_divider" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="3dip"
+        android:layout_marginTop="10dp"
+        android:text="全部"
+        android:textColor="@color/right_menu_selected"
+        android:textSize="20sp" />
+
+    <com.ninexiu.utils.PinnedListView
+        android:id="@+id/pinnedlistview"
+        android:layout_width="fill_parent"
+        android:divider="@null"
+        android:layout_height="fill_parent"
+        android:footerDividersEnabled="false" >
+    </com.ninexiu.utils.PinnedListView>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_mg_section_header"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/right_menu"
+    android:focusable="true"
+    android:paddingBottom="3dip"
+    android:paddingLeft="10dip"
+    android:paddingTop="3dip"
+    android:textColor="@color/white"
+    android:textSize="12sp" />
